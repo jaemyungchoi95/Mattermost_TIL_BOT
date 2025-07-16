@@ -3,6 +3,9 @@ name: Daily Reminder
 on:
   schedule:
     - cron: '55 8 * * *'
+    # 수동 실행을 위한 트리거 추가
+  workflow_dispatch:
+
 jobs:
   send-daily-notification:
     runs-on: ubuntu-latest
