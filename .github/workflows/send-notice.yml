@@ -2,7 +2,7 @@ name: Daily Reminder
 
 on:
   schedule:
-    - cron: '0 8 * * *'
+    - cron: '42 8 * * *'
 jobs:
   send-daily-notification:
     runs-on: ubuntu-latest
