@@ -1,0 +1,15 @@
+name: Daily Reminder
+
+on:
+  schedule:
+    - cron: '0 8 * * *'
+jobs:
+  send-daily-notification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send Mattermost Notification
+        run: |
+          curl -i -X POST \
+          -H 'Content-Type: application/json' \
+          -d '{"text": "⏰ 오후 5시입니다! 오늘 하루도 고생 많으셨습니다. 마무리 잘 하시고 즐거운 저녁 되세요!", "username":"TIL 봇"}' \
+          ${{ secrets.MATTERMOST_WEBHOOK_URL }}
