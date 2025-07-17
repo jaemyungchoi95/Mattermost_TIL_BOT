@@ -3,7 +3,7 @@ name: Daily Reminder
 on:
   schedule:
     # '분 시 일 월 요일(0:일 ~ 6:토)'
-    - cron: '30 7 * * 1-5'
+    - cron: '45 7 * * 1-5'
     # 수동 실행을 위한 트리거 추가
   workflow_dispatch:
 
